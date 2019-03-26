@@ -1,5 +1,5 @@
 `nlvep` - MATLAB toolbox providing a collection of nonlinear eigenvalue problems
-
+=======
 # About
 `nlevp` contains version 4.0 of the NLEVP MATLAB toolbox (74 problems).
 
@@ -25,7 +25,7 @@ The University of Manchester, UK, Mar. 2019. 12 pp.
 # Installation
 For details of how to install and use the toolbox see
 
-T. Betcke, N. J. Higham, V. Mehrmann, G. M. N. Porzio, C. Schrîder, and F.
+T. Betcke, N. J. Higham, V. Mehrmann, G. M. N. Porzio, C. Schr‚Äùder, and F.
 Tisseur. NLEVP: A collection of nonlinear eigenvalue problems. Users' guide.
 MIMS EPrint 2011.117, Manchester Institute for Mathematical Sciences, The
 University of Manchester, UK, Dec. 2019. 10 pp.
