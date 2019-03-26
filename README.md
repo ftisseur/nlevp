@@ -1,4 +1,4 @@
-`nlvep` - MATLAB toolbox providing a collection of nonlinear eigenvalue problems
+`nlevp` - MATLAB toolbox providing a collection of nonlinear eigenvalue problems
 =======
 About
 ------
