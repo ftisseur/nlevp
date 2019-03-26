@@ -31,9 +31,9 @@ T. Betcke, N. J. Higham, V. Mehrmann, G. M. N. Porzio, C. Schroeder, and F.
 Tisseur. [NLEVP: A collection of nonlinear eigenvalue problems. Users' guide]
 (http://eprints.maths.manchester.ac.uk/2697/3/nlevp_ugVer4.pdf)
 MIMS EPrint 2011.117, Manchester Institute for Mathematical Sciences, The
-University of Manchester, UK, Dec. 2019. 10 pp.
+University of Manchester, UK, updated March 2019. 10 pp.
 (Can also be found in the report directory).
 
 License
 --------
-See "license.txt" for licensing information.
+See `license.txt` for licensing information.
