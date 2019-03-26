@@ -1,8 +1,8 @@
-`nlevp` - MATLAB toolbox providing a collection of nonlinear eigenvalue problems
+`NLEVP` - MATLAB toolbox providing a collection of nonlinear eigenvalue problems
 =======
 About
 ------
-`nlevp` contains version 4.0 of the NLEVP MATLAB toolbox (74 problems).
+`NLEVP` contains version 4.0 of the NLEVP MATLAB toolbox (74 problems).
 
 For details of the design and organization of the collection, and a description
 of the 52 problems in version 3.0, see
