@@ -134,33 +134,34 @@ F = @(z) [F1(z); F2(z); F3(z); F4(z); F5(z); F6(z)];
 end
 
 function F = bent_beam_fun(z)
-    
+
+z = z(:);
 l= 23.5;
 EI = 38.92e3;
 m = 1.833e-4;
 tau = 4.93e4;
       
 % Building the functions
-fun11 =  cosh(l*(m/EI)^(0.25)*sqrt(z));
-fun12 =  (m/EI)^(0.25)*sqrt(z)*cosh(l*(m/EI)^(0.25)* ...
+fun11 =  cosh(l.*(m/EI).^(0.25).*sqrt(z));
+fun12 =  (m/EI).^(0.25).*sqrt(z).*cosh(l.*(m/EI).^(0.25).* ...
                                         sqrt(z));
-fun13 =  (m/EI)^(0.5)*z*cosh(l*(m/EI)^(0.25)*sqrt(z));
-fun21 =  cos(l*(m/EI)^(0.25)*sqrt(z));
-fun22 =  (m/EI)^(0.25)*sqrt(z)*cos(l*(m/EI)^(0.25)* ...
+fun13 =  (m/EI).^(0.5).*z.*cosh(l.*(m/EI).^(0.25).*sqrt(z));
+fun21 =  cos(l.*(m/EI).^(0.25).*sqrt(z));
+fun22 =  (m/EI).^(0.25).*sqrt(z).*cos(l.*(m/EI).^(0.25).* ...
                                        sqrt(z));
-fun23 =  (m/EI)^(0.5)*z*cos(l*(m/EI)^(0.25)*sqrt(z));
-fun31 =  sinh(l*(m/EI)^(0.25)*sqrt(z));
-fun32 =  (m/EI)^(0.25)*sqrt(z)*sinh(l*(m/EI)^(0.25)* ...
+fun23 =  (m/EI).^(0.5).*z.*cos(l.*(m/EI).^(0.25).*sqrt(z));
+fun31 =  sinh(l.*(m/EI).^(0.25).*sqrt(z));
+fun32 =  (m/EI).^(0.25).*sqrt(z).*sinh(l.*(m/EI).^(0.25).* ...
                                         sqrt(z));
-fun33 =  (m/EI)^(0.5)*z*sinh(l*(m/EI)^(0.25)*sqrt(z));
-fun41 =  sin(l*(m/EI)^(0.25)*sqrt(z));
-fun42 =  (m/EI)^(0.25)*sqrt(z)*sin(l*(m/EI)^(0.25)* ...
+fun33 =  (m/EI).^(0.5).*z.*sinh(l.*(m/EI).^(0.25).*sqrt(z));
+fun41 =  sin(l.*(m/EI).^(0.25).*sqrt(z));
+fun42 =  (m/EI).^(0.25).*sqrt(z).*sin(l.*(m/EI).^(0.25).* ...
                                        sqrt(z));
-fun43 =  (m/EI)^(0.5)*z*sin(l*(m/EI)^(0.25)*sqrt(z));
-fun51 =  cos(l*(m/tau)^(0.5)*z);
-fun52 =  (m/tau)^(0.5)*z*cos(l*(m/tau)^(0.5)*z);
-fun61 =  sin(l*(m/tau)^(0.5)*z);
-fun62 =  (m/tau)^(0.5)*z*sin(l*(m/tau)^(0.5)*z);
+fun43 =  (m/EI).^(0.5).*z.*sin(l.*(m/EI).^(0.25).*sqrt(z));
+fun51 =  cos(l.*(m/tau).^(0.5).*z);
+fun52 =  (m/tau).^(0.5).*z.*cos(l.*(m/tau).^(0.5).*z);
+fun61 =  sin(l.*(m/tau).^(0.5).*z);
+fun62 =  (m/tau).^(0.5).*z.*sin(l.*(m/tau).^(0.5).*z);
     
 F =  [fun11, fun12, fun13, fun21, fun22, fun23, fun31, fun32, fun33,  ...
       fun41, fun42, fun43, fun51, fun52, fun61, fun62];
