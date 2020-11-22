@@ -1,4 +1,4 @@
-Copyright (c) 2019, Timo Betcke, Nicholas J. Higham, Volker Mehrmann,
+Copyright (c) 2020, Timo Betcke, Nicholas J. Higham, Volker Mehrmann,
 Gian Maria Negri Porzio, Christian Schroeder and Francoise Tisseur.
 All rights reserved.
 
