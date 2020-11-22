@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+`nlvep` - MATLAB toolbox providing a collection of nonlinear eigenvalue problems
+
+# About
+`nlevp` contains version 4.1 of the NLEVP MATLAB toolbox (80 problems).
+=======
 `NLEVP` - MATLAB toolbox providing a collection of nonlinear eigenvalue problems
 =======
 About
 ------
 `NLEVP` contains version 4.0 of the NLEVP MATLAB toolbox (74 problems).
+>>>>>>> d27ba715a786aa23e84da3c01ddd68ed9c081391
 
 For details of the design and organization of the collection, and a description
 of the 52 problems in version 3.0, see
@@ -19,6 +26,12 @@ N. J. Higham, G. M. N. Porzio, and F. Tisseur.
 MIMS EPrint 2019.5, Manchester Institute for Mathematical Sciences,
 The University of Manchester, UK, Mar. 2019. 12 pp.
 (Can also be found in the report directory).
+
+For a description of the 6 new problems in version 4.1, see
+
+N. J. Higham, G. M. N. Porzio, and F. Tisseur.
+An updated set of nonlinear eigenvalue problems, version 4.1 in the report
+directory.
 
 
 Installation

@@ -55,11 +55,12 @@ function varargout = nlevp(name,varargin)
 %  bent_beam          6-by-6 NEP from a bent beam model.
 %  bicycle            2-by-2 QEP from the Whipple bicycle model.
 %  bilby              5-by-5 QEP from Bilby population model.
-%  bucking_plate      3-by-3 NEP from a bucking plate model.
+%  buckling_plate     3-by-3 NEP from a buckling plate model.
 %  butterfly          Quartic matrix polynomial with T-even structure.
 %  canyon_particle    NEP from the Schrödinger equation on a canyon-like shape.
 %  cd_player          QEP from model of CD player.
 %  circular_piston    Sparse QEP from model of circular piston.
+%  clamped_beam_1d    NEP from 1D clamped beam model with delayed feedback control.
 %  closed_loop        2-by-2 QEP associated with closed-loop control system.
 %  concrete           Sparse QEP from model of a concrete structure.
 %  damped_beam        QEP from simply supported beam damped in the  middle.
@@ -89,6 +90,8 @@ function varargout = nlevp(name,varargin)
 %  mobile_manipulator QEP from model of 2-dimensional 3-link mobile manipulator.
 %  nep1               2-by-2 basic NEP example.
 %  nep2               3-by-3 basic NEP example.
+%  nep3               NEP with weighted norm coefficients.
+%  neuron_dde         2-by-2 NEP from a neural-network DDE.
 %  omnicam1           9-by-9 QEP from model of omnidirectional camera.
 %  omnicam2           15-by-15 QEP from model of omnidirectional camera.
 %  orr_sommerfeld     Quartic PEP arising from Orr-Sommerfeld equation.
@@ -114,6 +117,7 @@ function varargout = nlevp(name,varargin)
 %  relative_pose_6pt  QEP from relative pose problem in computer vision.
 %  sandwich_beam      NEP from model of a clamped sandwich beam.
 %  schrodinger        QEP from Schrodinger operator.
+%  schrodinger_abc    NEP from Schrodinger equation with absorbing boundary condition.
 %  shaft              QEP from model of a shaft on bearing supports with a
 %                     damper.
 %  sign1              QEP from rank-1 perturbation of sign operator.
@@ -124,9 +128,11 @@ function varargout = nlevp(name,varargin)
 %  spring             QEP from finite element model of damped mass-spring
 %                     system.
 %  spring_dashpot     QEP from model of spring/dashpot configuration.
+%  square_root        Square root of a skew-symmetric matrix.
 %  surveillance       27-by-20 QEP from surveillance camera callibration.
 %  time_delay         3-by-3 NEP from a time-delay system.
 %  time_delay2        2-by-2 NEP from a time-delay system.
+%  time_delay3        NEP with high-variance-norm coefficients.
 %  utrecht1331        QEP  1331-by-1331 QEP with singular A1.
 %  wing               3-by-3 QEP from analysis of oscillations of a wing in
 %                     an airstream.

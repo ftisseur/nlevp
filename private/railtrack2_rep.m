@@ -5,7 +5,6 @@ function [coeffs,fun,F,xcoeffs] = railtrack2_rep(n,omega)
 %  DIM*705, where DIM > 1 is chosen so that DIM*705 is as close as
 %  possible to N, defined by
 %  R(lam)*x = (lam*A2 + A1 + A0/lam)*x = 0.
-%  DIM is chosen such that DIM*705 approximates N.
 %  A0, A1, A2 have the form
 %               |  0   0   H1  |
 %          A0 = |  0   0   0   | = A2.'
@@ -19,7 +18,7 @@ function [coeffs,fun,F,xcoeffs] = railtrack2_rep(n,omega)
 %  where H0 and H1 are 705-by-705 complex matrices depending on OMEGA.
 %  The defaults are N = 51*705, OMEGA = 1000.
 %  The matrices are returned in a cell array: COEFFS = {A0, A1, A2}.
-%  Notice that this is the rational formulation of nlevp('railtrack').
+%  Notice that this is the rational formulation of nlevp('railtrack2').
 %  FUN is a function handle to evaluate the monomials \lambda^{-1}, 1, lambda,
 %  and their derivatives.
 %  F is the function handle lam*A2 + A1 + A0/lam.
@@ -37,11 +36,11 @@ function [coeffs,fun,F,xcoeffs] = railtrack2_rep(n,omega)
 %
 %  T.-M. Huang, W.-W. Lin and J. Qian, Structure-preserving algorithms
 %  for palindromic quadratic eigenvalue problems arising from vibration on fast 
-%  trains, SIAM J. Matrix Anal. Appl., 30(4):1566–1592, 2008.
+%  trains, SIAM J. Matrix Anal. Appl., 30(4):1566ï¿½1592, 2008.
 %
 %  C.-H. Guo and W.-W. Lin, Solving a structured quadratic eigenvalue
 %  problem by a structure-preserving doubling algorithm. 
-%  SIAM J. Matrix Anal. Appl., 31(5):2784–2801, 2010.
+%  SIAM J. Matrix Anal. Appl., 31(5):2784ï¿½2801, 2010.
 
 % Default values.
 if nargin < 1 || isempty(n)
@@ -57,7 +56,13 @@ end
 dim = round(n/705);
 % n = dim*705;
 
-if dim <= 1, error('N must be at least 1410.'), end
+
+if dim <= 1
+    warning('N must be at least 1410. N is now 1410');
+dim = 2;
+n = 1410;
+end
+
 
 K0 = 0; K1 = 0; M0 = 0; M1 = 0; % Just to prevent lint-warnings.
 

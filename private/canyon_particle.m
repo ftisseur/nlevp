@@ -25,14 +25,14 @@ function [coeffs, fun, F, xcoeffs] = canyon_particle(stepSize, w1, w2, l, m, dep
 %  parameter-dependent, banded (80 bands), low-rank.
  
 %  References:
-%  S. Güttel, R. Van Beeumen, K. Meerbergen, and W. Michiels. 
+%  S. Gï¿½ttel, R. Van Beeumen, K. Meerbergen, and W. Michiels. 
 %  NLEIGS: a class of fully rational Krylov methods for nonlinear eigenvalue 
-%  problems. SIAM J. Sci. Comput., 36(6):A2842–A2864, 2014.
+%  problems. SIAM J. Sci. Comput., 36(6):A2842ï¿½A2864, 2014.
 %
 %  W. Vandenberghe, M. Fischetti, R. Van Beeumen, K. Meerbergen, W. Michiels, 
 %  and C. Effenberger. Determining bound states in a semiconductor device with 
 %  contacts using a nonlinear eigenvalue solver. 
-%  Journal of Computational Electronics, 13(3):753–762, 2014.
+%  Journal of Computational Electronics, 13(3):753ï¿½762, 2014.
 %
 %  A part of this code is an adaptation from "particle_init.m" by William 
 %  Vandenberghe, which can be found in NLEIGS v0.5 (23/01/19).
@@ -178,10 +178,10 @@ end
 %% nonlinear functions
 f = cell(length(brpts),1);
 for j = 1:interval-1
-     f{j} = @(lambda) expm(1i*sqrtm(m*(lambda-brpts(j)*lambda^0)));
+     f{j} = @(lambda) exp(1i.*(m.*(lambda-brpts(j))).^(0.5));
 end
 for j = interval:length(brpts)
-     f{j} = @(lambda) expm(-sqrtm(m*(-lambda+brpts(j)*lambda^0)));
+     f{j} = @(lambda) exp(-(m.*(-lambda+brpts(j))).^(0.5));
 end
 
 % Setting coeffs
@@ -202,11 +202,12 @@ end
 
 
 function fun = canyon_particle_fun(lam, f)
+lam = lam(:);
 N = length(f);
-fun = zeros(1,N+2);
-fun(1:2) = [1 -lam];
+fun = zeros(length(lam), N+2);
+fun(:,1:2) = [ones(length(lam),1) -lam];
 for k = 1:N
-    fun(k+2) = -f{k}(lam);
+    fun(:,k+2) = -f{k}(lam);
 end  
 end
 

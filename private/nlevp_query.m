@@ -69,12 +69,14 @@ X = add_problem(X,'bcc_traffic','pep','qep','real','parameter_dependent',...
 X = add_problem(X,'bent_beam','nep','real');
 X = add_problem(X,'bicycle','pep','qep','real','parameter-dependent');
 X = add_problem(X,'bilby','pep','qep','real','parameter-dependent');
-X = add_problem(X,'bucking_plate','nep','real','symmetric');
+X = add_problem(X,'buckling_plate','nep','real','symmetric');
 X = add_problem(X,'butterfly','pep','real','parameter-dependent','T-even',...
                   'scalable','sparse', 'banded'); %(8,8) diagonals
 X = add_problem(X,'canyon_particle','nep','parameter-dependent',...
                   'scalable','sparse', 'banded', 'low-rank'); %(80,80) diags)
 X = add_problem(X,'cd_player','pep','qep','real');
+X = add_problem(X, 'clamped_beam_1d', 'nep','real', 'parameter-dependent', 'scalable', ...
+                 'sparse', 'tridiagonal', 'banded', 'low-rank');
 X = add_problem(X,'circular_piston','pep','qep','real','sparse');
 X = add_problem(X,'closed_loop','pep','qep','real','parameter-dependent');
 X = add_problem(X,'concrete','pep','qep','symmetric','parameter-dependent',...
@@ -114,6 +116,8 @@ X = add_problem(X,'mirror','pep','real','random');
 X = add_problem(X,'mobile_manipulator','pep','qep','real');
 X = add_problem(X,'nep1','nep');
 X = add_problem(X,'nep2','nep');
+X = add_problem(X,'nep3','nep','scalable','parameter-dependent','random');
+X = add_problem(X,'neuron_dde','nep','real','parameter-dependent');
 X = add_problem(X,'omnicam1','pep','qep','real');
 X = add_problem(X,'omnicam2','pep','qep','real');
 X = add_problem(X,'orr_sommerfeld','pep','parameter-dependent', ...
@@ -148,6 +152,8 @@ X = add_problem(X,'relative_pose_5pt','pep','real');
 X = add_problem(X,'relative_pose_6pt','pep','qep','real');
 X = add_problem(X,'sandwich_beam','nep','sparse', 'banded'); %(6,6)
 X = add_problem(X,'schrodinger','pep','qep','real','symmetric','sparse');
+X = add_problem(X,'schrodinger_abc','nep','real','sparse', 'banded', ...
+                  'low-rank','scalable'); 
 X = add_problem(X,'shaft','pep','qep','real','symmetric','sparse',...
                   'banded', 'low-rank'); % (3,3)
 X = add_problem(X,'sign1','pep','qep','hermitian','parameter-dependent',...
@@ -162,9 +168,11 @@ X = add_problem(X,'spring','pep','qep','real','symmetric',...
                   'scalable','sparse', 'tridiagonal', 'banded');
 X = add_problem(X,'spring_dashpot','pep','qep','real','parameter-dependent',...
                   'scalable','sparse','random', 'low-rank');
+X = add_problem(X,'square_root','nep','real','sparse');
 X = add_problem(X,'surveillance','pep','qep','real','nonsquare','nonregular');
 X = add_problem(X,'time_delay','nep', 'real');
 X = add_problem(X,'time_delay2','nep', 'real', 'parameter-dependent');
+X = add_problem(X,'time_delay3','nep','real','scalable','parameter-dependent','random');
 X = add_problem(X,'utrecht1331','pep','qep', 'sparse', 'banded'); %(132,132)
 X = add_problem(X,'wing','pep','qep','real');
 X = add_problem(X,'wiresaw1','pep','qep','real','t-even','gyroscopic',...
