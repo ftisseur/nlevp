@@ -31,12 +31,12 @@ function varargout = nep1_fun(lam)
 lam = lam(:);
 n = length(lam);
 
-varargout{1} = [ones(n,1), exp(1i*lam^2)];
+varargout{1} = [ones(n,1), exp(1i*lam.^2)];
 if nargout >= 2
-    f = 2*1i*lam*exp(1i*lam^2);
+    f = 2*1i*lam.*exp(1i*lam.^2);
     varargout{2} = [zeros(n,1),f];
     for k = 2:nargout-1
-        f = 1i*lam*f;
+        f = 1i.*lam.*f;
         varargout{k+1} = [zeros(n,2),f];
     end
 end

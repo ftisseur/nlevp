@@ -41,17 +41,17 @@ F = @(z) [2*exp(z)+cos(z)-14 (z^2-1)*sin(z)+ ...
 end
 
 function F = nep2_fun(z)
-
+z = z(:);
 f0 = z;
 f1 = exp(z);
 f2 = z.*exp(z);
 f3 = exp(z).*cos(z);
 f4 = z.*exp(z).*cos(z);
 f5 = cos(z);
-f6 = z*cos(z);
+f6 = z.*cos(z);
 f7 = sin(z);
 f8 = z.^2.*sin(z);
-f9 = 1;
+f9 = ones(size(z));
   
 F = [f0 f1 f2 f3 f4 f5 f6 f7 f8 f9];
 end
